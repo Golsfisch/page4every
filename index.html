@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Simple Base Website</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        color: #222;
+    }
+
+    header {
+        background: #4a90e2;
+        color: white;
+        padding: 30px;
+        text-align: center;
+    }
+
+    nav {
+        background: #222;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav button {
+        padding: 10px 20px;
+        margin: 5px;
+        background: #4a90e2;
+        border: none;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    nav button:hover {
+        background: #357ABD;
+    }
+
+    /* sections */
+    section {
+        display: none;
+        padding: 30px;
+    }
+
+    section.active {
+        display: block;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        margin-top: 40px;
+        opacity: 0.5;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Simple Base Website</h1>
+    <p>A clean starter template for any project.</p>
+</header>
+
+<nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('about')">About</button>
+    <button onclick="showPage('contact')">Contact</button>
+</nav>
+
+<section id="home" class="active">
+    <h2>Home</h2>
+    <p>Welcome to your simple starter website.</p>
+</section>
+
+<section id="about">
+    <h2>About</h2>
+    <p>This is an easy base you can use for any kind of website.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: yourmail@example.com</p>
+</section>
+
+<footer>© 2025 Your Name — All rights reserved</footer>
+
+<script>
+    function showPage(page) {
+        document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+        document.getElementById(page).classList.add("active");
+    }
+</script>
+
+</body>
+</html>
